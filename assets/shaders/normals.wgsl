@@ -1,4 +1,4 @@
-#import "shaders/utils.wgsl"::{Normal,float_to_int}
+#import "shaders/helper.wgsl"::{Normal,float_to_int}
 
 @group(0) @binding(0) var<storage, read> new_vertices: array<vec3<f32>>;
 @group(0) @binding(1) var<storage, read> indices: array<u32>;
