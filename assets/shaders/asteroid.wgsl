@@ -1,5 +1,5 @@
 #import "shaders/crater.wgsl"::calculateCraterDepth
-#import "shaders/simplex.wgsl"::{simpleNoise, smoothedRidgidNoise, fractal_noise_grad}
+#import "shaders/simplex.wgsl"::{simpleNoise, smoothedRigidNoise, fractal_noise_grad}
 #import "shaders/helper.wgsl"::Normal
 
 @group(0) @binding(0) var<storage, read> vertices: array<vec3<f32>>;
