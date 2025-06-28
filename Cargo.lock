@@ -3484,6 +3484,7 @@ name = "random-asteroid"
 version = "0.1.0"
 dependencies = [
  "bevy",
+ "bytemuck",
  "rand 0.9.1",
 ]
 
