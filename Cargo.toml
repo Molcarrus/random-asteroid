@@ -4,6 +4,8 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-bevy = "0.16.1"
+bevy = "0.15.1"
+bevy_easy_compute = "0.15.0"
+bevy_reflect = "0.15.1"
 bytemuck = "1.23.1"
 rand = "0.9.1"
