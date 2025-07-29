@@ -1,7 +1,7 @@
-#import "shaders/helper.wgsl"::{smooth_max, smooth_min}
+#import "shaders/utils.wgsl"::{smooth_max, smooth_min}
 
 struct Crater {
-    centre: array<f32, 3>,
+    centre: array<f32,3>,
     radius: f32,
     floor_height: f32,
     smoothness: f32,
@@ -15,7 +15,7 @@ struct Crater {
 fn calculateCraterDepth(vertexPos: vec3<f32>) -> f32 {
     var craterHeight: f32 = 0.0;
 
-    or (var i: u32 = 0; i < num_craters; i = i + 1) {
+    for (var i: u32 = 0; i < num_craters; i = i + 1) {
         let centre = vec3(craters[i].centre[0],craters[i].centre[1],craters[i].centre[2]);
         let x = length(vertexPos - centre) / craters[i].radius;
 

@@ -1,8 +1,5 @@
-use bevy::{
-    prelude::TypePath,
-    render::render_resource::ShaderRef
-};
-
+use bevy::prelude::TypePath;
+use bevy::render::render_resource::ShaderRef;
 use bevy_easy_compute::prelude::ComputeShader;
 
 #[derive(TypePath)]
@@ -10,7 +7,7 @@ pub struct AsteroidShapeComputeShader;
 
 impl ComputeShader for AsteroidShapeComputeShader {
     fn shader() -> ShaderRef {
-        "shaders/asteroid.wgsl".into()
+        "shaders/compute_asteroid_shape.wgsl".into()
     }
 }
 
@@ -19,15 +16,17 @@ pub struct NormalComputeShader;
 
 impl ComputeShader for NormalComputeShader {
     fn shader() -> ShaderRef {
-        "shaders/normals.wgsl".into()
+        "shaders/compute_normals.wgsl".into()
     }
 }
 
 #[derive(TypePath)]
-pub struct NormalizeNormalComputerShader;
+pub struct NormalizeNormalComputeShader;
 
-impl ComputeShader for NormalizeNormalComputerShader {
+impl ComputeShader for NormalizeNormalComputeShader {
     fn shader() -> ShaderRef {
-        "shaders/normalise.wgsl".into()
+        "shaders/compute_normalize_normals.wgsl".into()
     }
 }
+
+

@@ -1,8 +1,8 @@
-#import "shaders/helper.wgsl"::{Normal,float_to_int}
+#import "shaders/utils.wgsl"::{NormalAccumulator,float_to_int}
 
 @group(0) @binding(0) var<storage, read> new_vertices: array<vec3<f32>>;
 @group(0) @binding(1) var<storage, read> indices: array<u32>;
-@group(0) @binding(2) var<storage, read_write> normal_accumulators: array<Normal>;
+@group(0) @binding(2) var<storage, read_write> normal_accumulators: array<NormalAccumulator>;
 @group(0) @binding(3) var<uniform> num_triangles: u32;
 
 @compute @workgroup_size(64)
